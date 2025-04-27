@@ -1,7 +1,7 @@
 let currentVersion = 1;
 
 function loadNewVersion(version) {
-  $.get(`./content/v${version}.html`, (data) => {
+  $.get(`./v${version}.html`, (data) => {
     $('#content').html(data);
     formatPage();
   });
