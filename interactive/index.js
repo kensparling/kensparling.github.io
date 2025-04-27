@@ -83,21 +83,22 @@ function formatPage() {
 
 $(document).ready(() => {
   loadNewVersion(currentVersion);
-  let hasTouchedTop = true;
+  let lastLoaded = 'top';
   const OFFSET = 5;
   
   $(window).scroll(() => {
     if ((window.innerHeight + window.scrollY + OFFSET) >= document.body.offsetHeight) {
-      if (hasTouchedTop) {
+      if (lastLoaded === 'top') {
         currentVersion++;
         loadNewVersion(currentVersion);
-        hasTouchedTop = false;
+        lastLoaded = 'bottom';
       }
-    }
-    
-    // Check if user scrolled back to top
-    if (window.scrollY === 0) {
-      hasTouchedTop = true;
+    } else if (window.scrollY <= 0 + OFFSET) {
+      if (lastLoaded === 'bottom') {
+        currentVersion++;
+        loadNewVersion(currentVersion);
+        lastLoaded = 'top';
+      }
     }
   });
 });
