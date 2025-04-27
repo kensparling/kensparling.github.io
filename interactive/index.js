@@ -93,7 +93,7 @@ $(document).ready(() => {
         loadNewVersion(currentVersion);
         lastLoaded = 'bottom';
       }
-    } else if (window.scrollY <= 0 + OFFSET) {
+    } else if (window.scrollY <= 0 + OFFSET + window.innerHeight) {
       if (lastLoaded === 'bottom') {
         currentVersion++;
         loadNewVersion(currentVersion);
