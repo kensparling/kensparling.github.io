@@ -1,6 +1,7 @@
 hr {
   width: 100%;
   height: 2px;
+  margin: 2rem auto;
   background-color: #555555;
   display: block !important;
   border: none;
@@ -18,5 +19,7 @@ body {
 }
 
 .page {
-  height: 90vh;
+  min-height: 90vh;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
