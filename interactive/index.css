@@ -1,0 +1,22 @@
+hr {
+  width: 100%;
+  height: 2px;
+  background-color: #555555;
+  display: block !important;
+  border: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.page {
+  height: 90vh;
+}
